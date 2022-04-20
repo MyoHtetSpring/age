@@ -90,23 +90,23 @@ jQuery(function($) {
         return false;
     });
     //fade trigger top
-    // function fadeAnime() {
-    //   $(".flipLeftTopTrigger").each(function () {
-    //     //flipLeftTopTriggerというクラス名が
-    //     var elemPos = $(this).offset().top - 50; //要素より、50px上の
-    //     var scroll = $(window).scrollTop();
-    //     var windowHeight = $(window).height();
-    //     if (scroll >= elemPos - windowHeight) {
-    //       $(this).addClass("flipLeftTop"); // 画面内に入ったらflipLeftTopというクラス名を追記
-    //     } else {
-    //       $(this).removeClass("flipLeftTop"); // 画面外に出たらflipLeftTopというクラス名を外す
-    //     }
-    //   });
-    // }
+    function fadeAnime() {
+      $(".flipLeftTopTrigger").each(function () {
+        //flipLeftTopTriggerというクラス名が
+        var elemPos = $(this).offset().top - 50; //要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight) {
+          $(this).addClass("flipLeftTop"); // 画面内に入ったらflipLeftTopというクラス名を追記
+        } else {
+          $(this).removeClass("flipLeftTop"); // 画面外に出たらflipLeftTopというクラス名を外す
+        }
+      });
+    }
 
-    // $(window).scroll(function () {
-    //   fadeAnime(); //call function fadeAnime
-    // });
+    $(window).scroll(function () {
+      fadeAnime(); //call function fadeAnime
+    });
     $(".fadeUpTrigger").each(function () {
       //fadeUpTriggerというクラス名が
       var elemPos = $(this).offset().top - 50; //要素より、50px上の
@@ -121,6 +121,22 @@ jQuery(function($) {
     $(function() {
       $('.new-list li').matchHeight();
     });
+
+    //back to top jquery
+
+    // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      $('#return-to-top').fadeIn(200);    // Fade in the arrow
+  } else {
+      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+  }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+  $('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+  }, 500);
+});
 
   });
   
