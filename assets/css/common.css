@@ -32,7 +32,7 @@ h1 {
     color: #b30000;
 }
 .new-title {
-    height: 60px;
+    /* height: 60px; */
     overflow: hidden;
 }
 .new-title a {
@@ -126,7 +126,7 @@ h1 {
     }
   
     to {
-      transform: translateY(-20px);
+      transform: translateY(0px);
   
       opacity: 1;
     }
