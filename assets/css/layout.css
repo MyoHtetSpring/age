@@ -609,6 +609,9 @@ bread crumb
   .nav-box.nav-open {
     display: block;
   }
+  .nav-box.nav-open ul {
+    height: 100vh;
+  }
   .nav-box .container {
     margin-bottom: 60px;
     background: #b30000;
