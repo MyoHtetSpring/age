@@ -114,9 +114,7 @@ h1 {
 .fadeUp {
     animation-name: fadeUpAnime;
     animation-duration: 1s;
-  
     opacity: 0;
-  
     animation-fill-mode: forwards;
   }
   
