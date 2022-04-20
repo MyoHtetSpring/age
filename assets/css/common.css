@@ -126,7 +126,7 @@ h1 {
     }
   
     to {
-      transform: translateY(0);
+      transform: translateY(-20px);
   
       opacity: 1;
     }
